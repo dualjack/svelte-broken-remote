@@ -3,6 +3,7 @@
     import {executeSomething} from "./test.remote.ts";
     import {invalidateAll} from "$app/navigation";
 
+    let {data} = $props();
 
     async function onDoSomething(){
         try {
@@ -27,3 +28,5 @@
 </div>
 
 <Wrapper/>
+
+<pre>{JSON.stringify(data, null, 2)}</pre>
